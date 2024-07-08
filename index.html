@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Avançado</title>
+
+    <!--CSS do projeto-->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!--Font Awesome-->
+
+    <!--JS do Projeto-->
+    <script src="scripts.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1>Todo Avançado</h1>
+      </header>
+        <form id="todo-form">
+          <p>Adicione a sua Tarefa</p>
+          <div class="form-control">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="O que você vai fazer"
+            />
+            <button type="submit">
+              <i data-lucide="plus"></i>
+            </button>
+          </div>
+        </form>
+        <form id="edit-form" class="hide">
+          <p>Edite a sua tarefa:</p>
+          <div class="form-control">
+            <input type="text" id="edit-input" />
+            <button type="submit">
+              <i data-lucide="check-check" data-size="15"></i>
+            </button>
+          </div><br>
+          <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar: </h4>
+                <form>
+                    <input type="text" id="search-injput" placeholder="Buscar..."/>
+                    <button id="erase-button">
+                        <i data-lucide="delete" data-size="15"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="filter">
+                <h4>Filtrar</h4>
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A Fazer</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="todo">
+                <H3>Estou fazendo alguma coisa...</H3>
+                <button class="finish-todo">
+                    <i data-lucide="check-check" data-size="15"></i>
+                </button>
+                <button class="edit-form">
+                    <i data-lucide="pen" data-size="15"></i>
+                </button>
+                <button class="remove-todo">
+                    <i data-lucide="x" data-size="15"></i>
+                </button>
+            </div>
+            <div class="todo">
+                <H3>Estudar JavaScript</H3>
+                <button class="finish-todo">
+                    <i data-lucide="check-check" data-size="15"></i>
+                </button>
+                <button class="edit-form">
+                    <i data-lucide="pen" data-size="15"></i>
+                </button>
+                <button class="remove-todo">
+                    <i data-lucide="x" data-size="15"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+      lucide.createIcons({
+        attrs: {
+          class: ["buttonStyle"],
+        },
+      });
+    </script>
+  </body>
+</html>
