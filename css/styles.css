@@ -127,7 +127,6 @@ select {
 }
 #filter select {
   flex: 1;
-  
 }
 /*Todo list*/
 .todo {
@@ -152,4 +151,8 @@ select {
   color: #fff;
   text-decoration: line-through;
   font-style: italic;
+}
+
+.eventNone {
+  pointer-events: none;
 }
